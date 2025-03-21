@@ -29,7 +29,7 @@ If en = 0, all outputs remain 0.
 The Verilog implementation of the 3-to-8 decoder:
 
 module decoder3to8 ( 
-input wire [2:0] in, // 3-bit input 
+input wire [2:0] in, 
 input wire 
 en, // Enable signal 
 output reg [7:0] out // 8-bit output 
