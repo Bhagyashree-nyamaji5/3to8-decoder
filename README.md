@@ -1,23 +1,22 @@
-###3-to-8 Decoder using Verilog HDL
+# 3-to-8 Decoder using Verilog HDL
 
-Project Overview
+## Project Overview
 
 This project involves the design and verification of a 3-to-8 decoder using Verilog HDL. A 3-to-8 decoder is a combinational circuit that takes a 3-bit binary input and activates one of the 8 output lines based on the input combination. The design has been verified using UVM (Universal Verification Methodology) and synthesized using OpenROAD.
 
 
-Specifications
+## Specifications
 
-Inputs:
-
+ ### Inputs:
 in[2:0] (3-bit binary input)
 
 en (Enable signal: 1-bit)
 
-Outputs:
+### Outputs:
 
 out[7:0] (8-bit one-hot encoded output)
 
-Design Architecture
+### Design Architecture
 
 The decoder operates based on a combinational always block.
 
@@ -25,7 +24,7 @@ When en = 1, a case statement determines the output based on the 3-bit input.
 
 If en = 0, all outputs remain 0.
 
-RTL Code
+## RTL Code
 
 The Verilog implementation of the 3-to-8 decoder:
 
@@ -53,7 +52,7 @@ module decoder3to8 (
     end
 endmodule
 
-Testbench
+## Testbench
 
 A testbench was developed to verify the correctness of the decoder.
 
@@ -90,7 +89,7 @@ module tb_decoder3to8;
     end
 endmodule
 
-Simulation & Verification
+## Simulation & Verification
 
 Simulation Tool: Synopsys VCS 2023.03
 
@@ -106,7 +105,7 @@ Scoreboard: Compares expected and actual outputs
 
 Coverage: Measures functional coverage
 
-Synthesis using OpenROAD
+## Synthesis using OpenROAD
 
 The design was synthesized using the OpenROAD tool with Sky130HD technology.
 
@@ -118,7 +117,7 @@ Design Area: 4662 sq. µm
 
 Timing Slack: 0.77 ns (No setup and hold violations)
 
-Results & Discussion
+## Results & Discussion
 
 The functional verification achieved 100% test case pass rate.
 
@@ -126,7 +125,7 @@ The waveform simulation confirmed the expected outputs.
 
 The GDS layout was successfully generated using OpenROAD.
 
-References
+## References
 
 EDA Playground Simulation: View Simulation
 
